@@ -142,7 +142,7 @@ Resources:
       Source:
         Type: GITHUB
         Location: !Sub https://github.com/${GitHubUser}/${GitHubRepo}.git
-        BuildSpec: buildspec-setup.yml
+        #BuildSpec: buildspec-setup.yml
       TimeoutInMinutes: 10
   CodeBuildCleanup:
     Type: AWS::CodeBuild::Project
@@ -160,7 +160,7 @@ Resources:
       Source:
         Type: GITHUB
         Location: !Sub https://github.com/${GitHubUser}/${GitHubRepo}.git
-        BuildSpec: buildspec-cleanup.yml
+        #BuildSpec: buildspec-cleanup.yml
       TimeoutInMinutes: 10
   CodeBuildTest:
     Type: AWS::CodeBuild::Project
